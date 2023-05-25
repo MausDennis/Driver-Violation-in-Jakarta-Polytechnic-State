@@ -6,5 +6,6 @@ Four machine learning models were developed, each with special abilities. the ca
 
 # 2. How the app works?
 The following is a picture of the camera used and installed in a place at the Politeknik Negeri Jakarta
-
+<p>
+  <img src = 
 
