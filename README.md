@@ -90,7 +90,6 @@ This section will provide an explanation of the code required to develop the mod
 
 To insert files into Google Collaboratory, the code above is used to import files from Google Drive.
 
-
 <p align = "center">
   <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-7-page-00001.jpg width="500" height="500">
 </p>
@@ -211,14 +210,15 @@ The code above is used to call the dataset from roboflow, which is used by robof
 If yolov5 is implemented in code, the architectural form is as follows.
 
 <p align = "center">
-  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-27-page-00001.jpg width="500" height="500">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/27x_page-0001%20(1).jpg width="700" height="350">
 </p>
 
 This code is used to train a model in google collaboratory
 
 <p align = "center">
-  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-28-page-00001.jpg width="500" height="300">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-27-page-00001.jpg width="600" height="400">
 </p>
+
 Here, trained weights that have been trained from previous training are used to retrain to improve model accuracy.
 
 B. Processing datasets to become data results
@@ -227,17 +227,17 @@ In this section, we provide an explanation of the data sources used to learn to 
 The dataset used is a collection of images in .jpg format. This dataset can be accessed for free from Roboflow, which also functions as a provider of photo and video recordings in various formats.
 
 <p align = "center">
-  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-29-page-00001.jpg width="500" height="300">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-28-page-00001.jpg width="500" height="300">
 </p>
 
 <p align = "center">
-  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-30-page-00001.jpg width="700" height="300">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-29-page-00001.jpg width="500" height="300">
 </p>
 
 The image above shows the Annotated process in Roboflow. In addition to the image of two people wearing helmets, you can see a green to yellow brass box labeled as a helmet. Other than the purple box labeled as no helmet, a woman is not seen in figure 3.31.
 
 <p align = "center">
-  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-31-page-00001.jpg width="500" height="300">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-30-page-00001.jpg width="700" height="300">
 </p>
 
 The box coordinates discussed earlier are shown in the file above. The number one in the figure indicates the label class, while the decimal number indicates the box position discussed earlier.
@@ -251,40 +251,45 @@ Validation Set 19%
 Testing Set 11%
 
 <p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-31-page-00001.jpg width="500" height="300">
+</p>
+
+For this example, the dataset split is split 25:7:4 to prevent overfitting when training the machine learning model.
+
+<p align = "center">
   <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-32-page-00001.jpg width="500" height="300">
 </p>
-For this example, the dataset split is split 25:7:4 to prevent overfitting when training the machine learning model.
 
 <p align = "center">
   <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-33-page-00001.jpg width="500" height="300">
 </p>
 
-<p align = "center">
-  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-34-page-00001.jpg width="500" height="300">
-</p>
-
 Development process and data preprocessing. Roboflow is given the freedom in these two stages to choose the method for each process in the data augmentation and preprocessing sections. In this case, the settings only manage those two processes, as shown in the image above.
 
 <p align = "center">
-  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-35-page-00001.jpg width="500" height="600">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-34-page-00001.jpg width="500" height="300">
 </p>
 
 Before images can be used as datasets in Google Collab, this is the final stage. At this time, Roboflow offers a variety of version size options to work with.
 
 <p align = "center">
-  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-36-page-00001.jpg width="500" height="300">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-35-page-00001.jpg width="500" height="600">
 </p>
 
 Once the image is complete, arrange it. The image creation process has been completed, which will be used for collaboration in Google Collab. Export the dataset file in code form to enable calling it into Google Collab.
 
 <p align = "center">
-  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-37-page-00001.jpg width="500" height="300">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-36-page-00001.jpg width="500" height="300">
 </p>
 
 The following is the result of exporting the code in Google Collab.
 
 C. Model for output in machine learning
 In this section. The results of the machine learning model will be shown in the form of photo footage.
+
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-37-page-00001.jpg width="500" height="300">
+</p>
 
 <p align = "center">
   <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-38-page-00001.jpg width="500" height="300">
@@ -298,45 +303,57 @@ In this section. The results of the machine learning model will be shown in the 
   <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-40-page-00001.jpg width="500" height="300">
 </p>
 
-<p align = "center">
-  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-41-page-00001.jpg width="500" height="300">
-</p>
-
 The collection of pictures above is footage from the model.
 
 # 3.3 Realisasi dan Visualisasi Model deteksi Plat Nomor Kendaraan
 A. Build machine learning models
 This section will provide an explanation of the code required to develop the model to perform the tasks it desires.
 
-====> Gambar 3. 43 Memanggil Imutils <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-41-page-00001.jpg width="500" height="300">
+</p>
 
 To manipulate images, the Imutils library supports models by performing translation, rotation, scaling, and skeletonization.
 
-====> Gambar 3. 44 Memanggil Gambar untuk diubah seutuhnya menjadi warna abu - abu <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-42-page-00001.jpg width="500" height="300">
+</p>
 
 The code enters the image for processing. Images are converted to ash before processing.
 
-====> Gambar 3. 45 Gambar di filter dan dicari tepinya <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-43-page-00001.jpg width="500" height="300">
+</p>
 
 An image that has been grayed out is shown in the image above. At this point, the image is filtered with noise reduction and edge recognition to produce a contoured image with a predominance of black.
 
-====> Gambar 3. 46 Kode untuk mengetahui dugaan plat nomor berada <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-44-page-00001.jpg width="500" height="300">
+</p>
 
 The code above is used to identify the suspected location of the license plate.
 	
-====> Gambar 3. 47 Kode untuk memanggil kontur dan masking <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-45-page-00001.jpg width="500" height="300">
+</p>
 
 The contour is called and the masking process starts with the code above.
 
-====> Gambar 3. 48 Kode untuk melakukan masking dengan tujuan mencari lempengan plat nomor lalu gambar dikerat <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-46-page-00001.jpg width="500" height="300">
+</p>
 
 The above code is used to close by looking for the number plate plate and then drawing it.
 
-====> Gambar 3. 49 Kode agar model dapat membaca tulisan atau angka yang terdapat di lempengan plat nomor <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-47-page-00001.jpg width="500" height="300">
+</p>
 
 The model uses the code above to read the writing or numbers on the license plate.
 
-====> Gambar 3. 50 Kode untuk menampilkan hasil bacaan berbarengan dengan foto inputan untuk dideteksi plat nomornya <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-48-page-00001.jpg width="700" height="350">
+</p>
 
 Reading results are displayed with the code above along with picture input to detect license plates.
 
@@ -345,11 +362,15 @@ This section, so that the model can work with the desired dataset, will explain 
 
 The license plate dataset is taken from Kaggle, then entered into the Kaggle code editor. This is done by inserting the dataset into the far right of the browser view.
 
-====> Gambar 3. 51 Proses mencari dataset di kaggle <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-49-page-00001.jpg width="500" height="300">
+</p>
 
 The image above shows the display of the dataset search process using Kaggle.
 
-====> Gambar 3. 52 Direktori model plat nomor di kaggle <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-50-page-00001.jpg width="500" height="300">
+</p>
 
 The dataset is ready to use in the Kaggle code editor
 
@@ -357,17 +378,29 @@ C. Model for output in machine learning
 
 This section The results of the machine learning model will be shown in the picture.
 
-====> Gambar 3. 53 Mobil (1) <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-51-page-00001.jpg width="500" height="300">
+</p>
 
-====> Gambar 3. 54 Mobil (2) <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-52-page-00001.jpg width="500" height="300">
+</p>
 
-====> Gambar 3. 55 Mobil (3) <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-53-page-00001.jpg width="500" height="300">
+</p>
 
-====> Gambar 3. 56 Plat Nomor (1) <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-54-page-00001.jpg width="500" height="300">
+</p>
 
-====> Gambar 3. 57 Plat Nomor (2) <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-55-page-00001.jpg width="500" height="300">
+</p>
 
-====> Gambar 3. 58 Mobil (4) <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-56-page-00001.jpg width="500" height="300">
+</p>
 
 Most of the images above are from the model.
 
@@ -375,15 +408,21 @@ Most of the images above are from the model.
 A. Build machine learning models
 This section will provide an explanation of the code required to develop the model to perform the tasks it desires.
 
-====> Gambar 3. 59 Kode untuk menginstall opencv di kaggle <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-57-page-00001.jpg width="500" height="300">
+</p>
 
 Opencv is used to detect objects in an image or video
 
-====> Gambar 3. 60 Menginstall ubuntu package <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-58-page-00001.jpg width="500" height="300">
+</p>
 
 Ubuntu package installation to help the model determine the speed.
 
-====> Gambar 3. 61 Algoritma Kecepatan <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-59-page-00001.jpg width="500" height="300">
+</p>
 
 This image shows the speed algorithm used to identify the speed of a motorized vehicle.
 
@@ -392,19 +431,27 @@ This section, so that the model can work with the desired dataset, will explain 
 
 When you find a dataset, you can find a license plate and then enter the dataset into the Kaggle code editor instantly. This allows you to use it as a material for machine learning models.
 
-====> Gambar 3. 62 Proses mencari dataset di kaggle <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-60-page-00001.jpg width="500" height="300">
+</p>
 
 To select a dataset, you will see a pop-up image. If you've downloaded the previous dataset to Kaggle, you can use it here as well.
 
-====> Gambar 3. 63 Direktori model kecepatan kendaraan di kaggle <==== 
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-62-page-00001.jpg width="500" height="300">
+</p>
 
 This image shows that the dataset was successfully entered into the input on kaggle
 
 C. Model for output in machine learning
 This section The results of the machine learning model will be shown in the picture. The output of this model is video, which is presented in this report as images.
 
-====> Gambar 3. 64 Model Kecepatan <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-63-page-00001.jpg width="500" height="300">
+</p>
 
-====> Gambar 3. 65 Model Kecepatan di PNJ <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-60-page-00001.jpg width="500" height="300">
+</p>
 
 Most of the images above are from the model.
