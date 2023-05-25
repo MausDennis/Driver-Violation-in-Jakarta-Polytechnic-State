@@ -239,89 +239,91 @@ The code enters the image for processing. Images are converted to ash before pro
 
 An image that has been grayed out is shown in the image above. At this point, the image is filtered with noise reduction and edge recognition to produce a contoured image with a predominance of black.
 
-Gambar 3. 46 Kode untuk mengetahui dugaan plat nomor berada
+====> Gambar 3. 46 Kode untuk mengetahui dugaan plat nomor berada <====
 
-Kode diatas digunakan untuk mengetahui letak yang diduga tempat plat nomor berada
+The code above is used to identify the suspected location of the license plate.
 	
-Gambar 3. 47 Kode untuk memanggil kontur dan masking
+====> Gambar 3. 47 Kode untuk memanggil kontur dan masking <====
 
-Kode ini di atas digunakan untuk memanggil kontur dan memulai proses masking.
+The contour is called and the masking process starts with the code above.
 
-Gambar 3. 48 Kode untuk melakukan masking dengan tujuan mencari lempengan plat nomor lalu gambar dikerat
+====> Gambar 3. 48 Kode untuk melakukan masking dengan tujuan mencari lempengan plat nomor lalu gambar dikerat <====
 
-Kode di atas digunakan untuk melakukan masking dengan tujuan mencari lempengan plat nomor lalu gambar dikerat.
+The above code is used to close by looking for the number plate plate and then drawing it.
 
-Gambar 3. 49 Kode agar model dapat membaca tulisan atau angka yang terdapat di lempengan plat nomor
+====> Gambar 3. 49 Kode agar model dapat membaca tulisan atau angka yang terdapat di lempengan plat nomor <====
 
-Kode di atas digunakan oleh model untuk dapat membaca tulisan atau angka yang terdapat di lempengan plat nomor
+The model uses the code above to read the writing or numbers on the license plate.
 
-Gambar 3. 50 Kode untuk menampilkan hasil bacaan berbarengan dengan foto inputan untuk dideteksi plat nomornya
+====> Gambar 3. 50 Kode untuk menampilkan hasil bacaan berbarengan dengan foto inputan untuk dideteksi plat nomornya <====
 
-Kode diatas digunakan untuk menampilkan hasil bacaan berbarengan dengan foto inputan untuk dideteksi plat nomornya
+Reading results are displayed with the code above along with picture input to detect license plates.
 
 B. Processing datasets to become data results
-Pada bagian ini. Akan dijelaskan asal dataset yang digunakan model machine learning untuk belajar memahami sehingga model dapat bekerja dengan yang diinginkan.
+This section, so that the model can work with the desired dataset, will explain the origin of the dataset used to learn to understand it.
 
-Dataset plat nomor didapatkan dari kaggle lalu dimasukkan ke dalam code editor kaggle dengan menginput dataset yang diinginkan di ujung kanan tampilan browser
+The license plate dataset is taken from Kaggle, then entered into the Kaggle code editor. This is done by inserting the dataset into the far right of the browser view.
 
-Gambar 3. 51 Proses mencari dataset di kaggle
+====> Gambar 3. 51 Proses mencari dataset di kaggle <====
 
-Gambar diatas adalah tampilan di kaggle untuk mencari dataset
+The image above shows the display of the dataset search process using Kaggle.
 
-Gambar 3. 52 Direktori model plat nomor di kaggle
+====> Gambar 3. 52 Direktori model plat nomor di kaggle <====
 
-Dataset siap digunakan di kaggle code editor
+The dataset is ready to use in the Kaggle code editor
 
 C. Model for output in machine learning
 
-Pada bagian ini. Akan ditunjukkan hasil dari kerja model machine learning dalam bentuk footage foto.
+This section The results of the machine learning model will be shown in the picture.
 
-Gambar 3. 53 Mobil (1)
+====> Gambar 3. 53 Mobil (1) <====
 
-Gambar 3. 54 Mobil (2)
+====> Gambar 3. 54 Mobil (2) <====
 
-Gambar 3. 55 Mobil (3)
+====> Gambar 3. 55 Mobil (3) <====
 
-Gambar 3. 56 Plat Nomor (1)
+====> Gambar 3. 56 Plat Nomor (1) <====
 
-Gambar 3. 57 Plat Nomor (2)
+====> Gambar 3. 57 Plat Nomor (2) <====
 
-Gambar 3. 58 Mobil (4)
+====> Gambar 3. 58 Mobil (4) <====
 
-Kumpulan gambar diatas adalah footage yang berasal dari model.
+Most of the images above are from the model.
 
-# 3.4 Realisasi dan Visualisasi Model deteksi Kecepatan Kendaraan
-A. Membangun model machine learning
-Pada bagian ini. Akan dijelaskan kode yang harus ada untuk pengembangan model agar model dapat menjalankan tugas yang diinginkan.
+# 3.4 Realization and Visualization of the Vehicle Speed Detection Model
+A. Build machine learning models
+This section will provide an explanation of the code required to develop the model to perform the tasks it desires.
 
-Gambar 3. 59 Kode untuk menginstall opencv di kaggle
+====> Gambar 3. 59 Kode untuk menginstall opencv di kaggle <====
 
-Opencv digunakan untuk mendeteksi objek yang ada di sebuah gambar maupun video
+Opencv is used to detect objects in an image or video
 
-Gambar 3. 60 Menginstall ubuntu package
+====> Gambar 3. 60 Menginstall ubuntu package <====
 
-Penginstalan ubuntu package untuk membantu model dalam mendeteksi kecepatan.
+Ubuntu package installation to help the model determine the speed.
 
-Gambar 3. 61 Algoritma Kecepatan
+====> Gambar 3. 61 Algoritma Kecepatan <====
 
-Pada gambar ini ditujukan algoritma kecepatan yang digunakan untuk mendeteksi kecepatan pada kendaraan bermotor
+This image shows the speed algorithm used to identify the speed of a motorized vehicle.
 
 B. Processing datasets to become data results
-Pada bagian ini. Akan dijelaskan asal dataset yang digunakan model machine learning untuk belajar memahami sehingga model dapat bekerja dengan yang diinginkan.
+This section, so that the model can work with the desired dataset, will explain the origin of the dataset used to learn to understand it.
 
-Sama seperti cara mencari datasetnya deteksi plat nomor dengan cara mencari lalu menambahkan dataset langsung di kaggle code editornya langsung dan dapat langsung digunakan untuk menjadi bahan untuk model machine learning .
+When you find a dataset, you can find a license plate and then enter the dataset into the Kaggle code editor instantly. This allows you to use it as a material for machine learning models.
 
-Gambar 3. 62 Proses mencari dataset di kaggle
+====> Gambar 3. 62 Proses mencari dataset di kaggle <====
 
-Terlihat gambar pop – up untuk memilih dataset yang diinginkan. Disini juga bisa menggunakan dataset sendiri jika sudah di unduh ke kaggle sebelumnya
+To select a dataset, you will see a pop-up image. If you've downloaded the previous dataset to Kaggle, you can use it here as well.
 
-Gambar 3. 63 Direktori model kecepatan kendaraan di kaggle Gambar ini menunjukkan bahwa dataset berhasil dimasukkan ke dalam input di kaggle
+====> Gambar 3. 63 Direktori model kecepatan kendaraan di kaggle <==== 
+
+This image shows that the dataset was successfully entered into the input on kaggle
 
 C. Model for output in machine learning
-Pada bagian ini. Akan ditunjukkan hasil dari kerja model machine learning dalam bentuk footage foto. Output dari hasil model ini berupa video dan akan disajikan di laporan ini sebagai footage foto
+This section The results of the machine learning model will be shown in the picture. The output of this model is video, which is presented in this report as images.
 
-Gambar 3. 64 Model Kecepatan
+====> Gambar 3. 64 Model Kecepatan <====
 
-Gambar 3. 65 Model Kecepatan di PNJ
+====> Gambar 3. 65 Model Kecepatan di PNJ <====
 
-Gambar - gambar diatas adalah footage yang berasal dari model.
+Most of the images above are from the model.
