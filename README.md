@@ -13,13 +13,17 @@ The following is a picture of the camera used and installed in a place at the Po
 
 Applications programs are demonstrated using flowchart diagrams. Flowchart diagrams in systems illustrate the connection and timing of processes.
 
-=======> Gambar 3.1 Cara kerja model machine learning deteksi pelanggaran di Politeknik Negeri Jakarta <========
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-1-page-00001.jpg width="1000" height="500">
+</p>
 
 The flowchart above shows how the model determines the classification of tasks to be performed. When the dataset is entered into the model we want to model, the system starts. First, the system identifies the type of vehicle that was at the scene, then identifies the number plate of the vehicle that is crossing the road. Finally, the system evaluates data from cameras at the scene to ascertain whether any violations have occurred, such as exceeding the speed limit for all vehicles and requiring motorists to wear helmets. Each tested model is entered into the system one by one. Then, images from the scene cameras were used to test the model. In the end, the results of the analysis made by the model will be sent in the form of images or videos, depending on how well the model accepts the test object.
 
 # 2.1 Vehicle Type Detection
 
-======> Gambar 3.2 Diagram Alur Model deteksi Jenis Kendaraan <=======
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-2-page-00001.jpg width="500" height="750">
+</p>
 
 The flowchart above shows the process of identifying vehicle types using Google Collaborate. Datasets, institutions, and photo/video input from surveillance cameras will be entered into Google Collaborate.
 
@@ -31,7 +35,9 @@ The graph shows the result of training the machine learning model after that ste
 
 # 2.2 Helmet Use Detection
 
-=====> Gambar 3.3 Diagram Alur Model deteksi Penggunaan Helm <======
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-3-page-00001.jpg width="500" height="750">
+</p>
 
 In the flowchart above, the helmet use detection diagram process is explained by two paths: Roboflow and Google Collaboratory. The second path ends when the dataset from roboflow is exported to Google Collaboratory. This continues until the trained weight is used to retrain the machine learning model to find images from various classes (helmet, no_helmet, and no helmet), which the model believes have above 40% correctness.
 
@@ -45,7 +51,9 @@ After the Roboflow path has completed its work, the changed dataset must be expo
 
 # 2.3 License Plate Reading Detection
 
-=====> Gambar 3.4 Diagram Alur Model deteksi Pembacaan Plat Nomor <=====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-4-page-00001.jpg width="500" height="750">
+</p>
 
 As before, license plate detection and reading uses Kaggle rather than Google Colaboratory. The dataset must be fetched before work begins, which must be integrated with the .xml file. File.xml contains information about bounding box photo coordinates for .jpg and .PNG formats. After the dataset is integrated with the previous file.xml.
 
@@ -59,7 +67,9 @@ Masking and reading of license plates is done afterwards with the help of the ea
 
 # 2.4  Driver speed detection
 
-=====> Gambar 3.5 Diagram Alur Model deteksi kecepatan para pengendara <===== 
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-5-page-00001.jpg width="500" height="750">
+</p>
 
 Driver speed detection is similar to detecting a driver's license plate number on Kaggle. The coding process in this section requires input such as installing the ubuntu package (libgtk2.0 – dev), importing the required libraries, test videos, and cascade. However, Cascade is a video file with a bounding box. This derived file is coded.xml.
 
@@ -74,39 +84,58 @@ Model Realization and Visualization will focus on how each model is built, how e
 A. Build machine learning models
 This section will provide an explanation of the code required to develop the model to perform the tasks it desires.
 
-=====> Gambar 3.8 Kode untuk dapat mengambil dataset dari Google Drive <====== 
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-6-page-00001.jpg width="500" height="500">
+</p>
+
 To insert files into Google Collaboratory, the code above is used to import files from Google Drive.
 
 
-=====> Gambar 3.9 Kode untuk ambil dataset, unzip, dan mengarahkan direktori <=====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-7-page-00001.jpg width="500" height="500">
+</p>
 
 The code above is used to point to the Google Collab directory to fetch the data, unzip it, and then point to the Google directory to train the custom model in the selected directory. 
 
-=====> Gambar 3.10 Kode untuk mengatur pembagian kelas dan diaturnya gambar - gambar yang ada di dataset <=====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-8-page-00001.jpg width="500" height="500">
+</p>
 
 With this code, you can edit the images in the dataset and insert the images into specific classes.
 
-=====> Gambar 3.11 Pelatihan Model <=====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-10-page-00001.jpg width="500" height="500">
+</p>
 
 The model shows that the convolutional neural network (cnn) architecture is used. model.compile is used for metrics, optimizer, and setup loss. History is the model. Features are used to instruct the model
 
-=====> Gambar 3.12 Memanggil yolov5 <=====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-11-page-00001.jpg width="500" height="500">
+</p>
 
 To include yolov5 in the model you have to get the code to call it from the github directory.
 
-=====> Gambar 3.13 Mengunduh package yolov5 yang ada di file requirements.txt <=====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-12-page-00001.jpg width="500" height="300">
+</p>
 
 Use this package to download the libraries needed by Yolov5
 
-=====> Gambar 3.14 Kode untuk memasukkan alat untuk diuji <=====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-13-page-00001.jpg width="500" height="300">
+</p>
 
 This code is used to feed the video input to Google Collaboratory for analysis by the model.
 
-=====> Gambar 3.15 Memanggil file detect.py untuk mendeteksi objek yang ada di video <=====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-14-page-00001.jpg width="500" height="300">
+</p>
 
 Calls the detect.py file to identify objects in the video
 
-=====> Gambar 3.16 Mengunduh Video yang sudah dilatih oleh model <=====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-15-page-00001.jpg width="500" height="300">
+</p>
 
 Currently, analysis results can be downloaded to see how well the model can analyze the videos that have been inserted.
 
@@ -117,24 +146,36 @@ The dataset used is a collection of images in .jpg format. This dataset can be a
 
 The dataset that you have obtained is stored on Google Drive in a folder called dataset.zip.
 
-=====> Gambar 3.17 dataset jenis kendaraan di Google drive <=====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-16-page-00001.jpg width="500" height="300">
+</p>
 
 To allow datasets to be downloaded automatically, an authentication process is performed on Google Collab before gaining access to Google Drive. change the settings where datasets are stored and set the directory where the dataset files are located, as shown below:
 
-=====> Gambar 3.18 Kode agar dataset dapat digunakan <=====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-17-page-00001.jpg width="500" height="300">
+</p>
 
 After the dataset is entered properly, the model will process the dataset to analyze it and provide analysis results. 
 
 C. Model for output in machine learning
 This section The results of the machine learning model will be shown in the picture. The output of this model is video, which is presented in this report as images.
 
-====> Gambar 3.19 Deteksi Jenis Kendaraan Bus di PNJ(1) <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-18-page-00001.jpg width="500" height="500">
+</p>
 
-=====> Gambar 3.20 Deteksi Jenis Kendaraan Mobil di PNJ(2) <=====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-19-page-00001.jpg width="500" height="300">
+</p>
 
-=====> Gambar 3.21 Deteksi Jenis Kendaraan Motor di PNJ(3) <=====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-20-page-00001.jpg width="500" height="300">
+</p>
 
-=====> Gambar 3.22 Deteksi Jenis Kendaraan di PNJ(4) <=====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-21-page-00001.jpg width="500" height="300">
+</p>
 
 The collection of pictures above is footage from the model.
 
@@ -142,28 +183,42 @@ The collection of pictures above is footage from the model.
 A. Build machine learning models
 In this section. It describes the code that must exist for model development so that the model can perform the desired task.
 
-====> Gambar 3. 23 Kode untuk memastikan bahwa runtime yang dipakai adalah GPU <=====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-22-page-00001.jpg width="500" height="300">
+</p>
 
-====> Gambar 3. 24 Memanggil yolov5 <=====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-23-page-00001.jpg width="500" height="300">
+</p>
 
 The above code works to ensure that the running runtime uses the GPU and then calls yolov5 as a library to detect the object.
 
-====> Gambar 3. 25 Menginstal dependencies <=====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-24-page-00001.jpg width="500" height="300">
+</p>
 
 To download some of the libraries required by the model, dependency installation is used.
 
-====> Gambar 3. 26 Memanggil dataset dari roboflow <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-25-page-00001.jpg width="500" height="300">
+</p>
 The code above is used to call the dataset from roboflow, which is used by roboflow to store the dataset for the model to train.
 
-====> Gambar 3. 27 Arsitektur yolov5 dalam bentuk kode <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-26-page-00001.jpg width="500" height="900">
+</p>
 
 If yolov5 is implemented in code, the architectural form is as follows.
 
-====> Gambar 3. 28 Melakukan pelatihan model terhadap dataset <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-27-page-00001.jpg width="500" height="500">
+</p>
 
 This code is used to train a model in google collaboratory
 
-====> Gambar 3. 29 Melakukan pelatihan kembali dengan trained weights <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-28-page-00001.jpg width="500" height="300">
+</p>
 Here, trained weights that have been trained from previous training are used to retrain to improve model accuracy.
 
 B. Processing datasets to become data results
@@ -171,13 +226,19 @@ In this section, we provide an explanation of the data sources used to learn to 
 
 The dataset used is a collection of images in .jpg format. This dataset can be accessed for free from Roboflow, which also functions as a provider of photo and video recordings in various formats.
 
-====> Gambar 3. 30 Contoh gambar yang di Annotated dengan kelas helmet <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-29-page-00001.jpg width="500" height="300">
+</p>
 
-====> Gambar 3. 31 Contoh gambar yang di Annotated  dengan kelas no helmet <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-30-page-00001.jpg width="700" height="300">
+</p>
 
 The image above shows the Annotated process in Roboflow. In addition to the image of two people wearing helmets, you can see a green to yellow brass box labeled as a helmet. Other than the purple box labeled as no helmet, a woman is not seen in figure 3.31.
 
-====> Gambar 3. 32 File yang berisi kelas dan posisi bounding box untuk gambar yang sudah di annotated <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-31-page-00001.jpg width="500" height="300">
+</p>
 
 The box coordinates discussed earlier are shown in the file above. The number one in the figure indicates the label class, while the decimal number indicates the box position discussed earlier.
 
@@ -189,37 +250,57 @@ Training Set 69%
 Validation Set 19%
 Testing Set 11%
 
-====> Gambar 3. 33 Pembagian set untuk dataset di Roboflow <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-32-page-00001.jpg width="500" height="300">
+</p>
 For this example, the dataset split is split 25:7:4 to prevent overfitting when training the machine learning model.
 
-====> Gambar 3. 34 Proses Preprocessing <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-33-page-00001.jpg width="500" height="300">
+</p>
 
-====> Gambar 3. 35 Proses Augmentation <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-34-page-00001.jpg width="500" height="300">
+</p>
 
 Development process and data preprocessing. Roboflow is given the freedom in these two stages to choose the method for each process in the data augmentation and preprocessing sections. In this case, the settings only manage those two processes, as shown in the image above.
 
-====> Gambar 3. 36 Melakukan Generate di Roboflow <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-35-page-00001.jpg width="500" height="600">
+</p>
 
 Before images can be used as datasets in Google Collab, this is the final stage. At this time, Roboflow offers a variety of version size options to work with.
 
-====> Gambar 3. 37 Export kode untuk Google Collab <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-36-page-00001.jpg width="500" height="300">
+</p>
 
 Once the image is complete, arrange it. The image creation process has been completed, which will be used for collaboration in Google Collab. Export the dataset file in code form to enable calling it into Google Collab.
 
-====> Gambar 3. 38 Export kode di Google Collab <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-37-page-00001.jpg width="500" height="300">
+</p>
 
 The following is the result of exporting the code in Google Collab.
 
 C. Model for output in machine learning
 In this section. The results of the machine learning model will be shown in the form of photo footage.
 
-====> Gambar 3. 39 Deteksi Helm(1) <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-38-page-00001.jpg width="500" height="300">
+</p>
 
-====> Gambar 3. 40 Deteksi Helm di PNJ(1) <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-39-page-00001.jpg width="500" height="300">
+</p>
 
-====> Gambar 3. 41 Deteksi Helm(1) <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-40-page-00001.jpg width="500" height="300">
+</p>
 
-====> Gambar 3. 42 Deteksi Helm di PNJ(2) <====
+<p align = "center">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-41-page-00001.jpg width="500" height="300">
+</p>
 
 The collection of pictures above is footage from the model.
 
