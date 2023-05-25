@@ -9,6 +9,73 @@ The following is a picture of the camera used and installed in a place at the Po
 <p>
   <img src = 
 
+Cara kerja program aplikasi digambarkan dengan menggunakan diagram flowchart. Flowchart diagram menggambarkan urutan proses secara mendetail dan hubungan antara suatu proses dengan proses lainnya dalam suatu sistem.
+
+Gambar 3. 1 Cara kerja model machine learning deteksi pelanggaran di
+Politeknik Negeri Jakarta
+
+
+
+
+Gambar 3.1 merupakan flowchart yang menggambarkan proses berjalannya model dalam menentukan klasifikasi tugas yang akan dijalankan. Sistem dimulai ketika dataset dimasukkan ke model yang ingin kita cari sebagai contoh. Sistem mengetahui terlebih dahulu jenis kendaraan yang ada di tempat kejadian lalu plat nomor kendaraan yang kebetulan menggunakan jalan tersebut, dan terakhir mengecek dengan hasil inputan dari kamera yang ada di tempat kejadian, apakah ada pelanggaran yang terjadi di jalan tersebut seperti melewati batas kecepatan untuk semua jenis kendaraan maupun wajib pemakaian helm bagi pengendara motor yang menggunakan jalan tersebut. Sistem melakukan input satu – satu untuk setiap model yang diujikannya lalu model akan diuji dengan footage yang didapat dari kamera tempat kejadian. Dan pada akhirnya, akan keluar hasil analisa yang dibuat oleh model baik dalam bentuk foto maupun video tergantung dari kemampuan  model dalam menerima objek ujinya.
+1.      Deteksi Jenis Kendaraan
+
+Gambar 3. 2 Diagram Alur Model deteksi Jenis Kendaraan
+
+
+
+
+Gambar 3.2 merupakan flowchart yang menggambarkan proses Deteksi Jenis Kendaraan dilakukan di google collaboratory. Di google collaboratory. akan dimasukkan dataset, library dan foto/video inputan dari kamera pengawas.
+Setelah memasukkan 3 item tersebut, callbacks akan dipanggil. Lalu, mengatur direktori untuk memastikan bahwa direktorinya telah  mengarahkan ke dataset yang diinginkan. Pemanggilan callback untuk memastikan agar data yang akan dilatih kelak tidak mencapai 98%. Karena jika sampai 98%, maka model machine learning memiliki kecenderungan dalam menilai target dengan hasil yang tidak tepat sesuai dengan aturan main confusion matrix.
+Lalu membaca dan mengatur dataset dalam hal ini adalah melakukan edit terhadap dataset yang sudah ada. Edit dilakukan pada dataset untuk membagi kelas (kelas jenis kendaraan) yang berisi gambar – gambar untuk dimasukkan sebagai data training dan data validation. Setelah membaca dan mengatur dataset. Akan dilanjutkan dengan setting, compile dan pelatihan model machine learning. Di tahap ini, setting akan dilakukan kepada arsitektur convolutional neural network (CNN), melakukan compile dan mengatur berapa lama model akan dilatih. Dan diakhiri dengan menampilkan grafik dari hasil latih model machine learning.
+Setelah langkah menampilkan grafik hasil latih model machine learning. Yolov5 akan dipanggil untuk melatih kembali model yang sudah dibuat sebelumnya. memanggil requirement.txt untuk mendenial error yang seharusnya tidak muncul, memasukkan model uji berupa video untuk dimasukkan analisa model deteksi jenis kendaraan. Dan terakhir mengunduh file video yang sudah dilatih kembali oleh yolov5.
+
+
+
+2.      Deteksi Penggunaan Helm
+
+Gambar 3. 3 Diagram Alur Model deteksi Penggunaan Helm Gambar 3.3 merupakan flowchart yang menggambarkan proses
+Diagram deteksi penggunaan Helm akan dijelaskan melalui 2 jalur yakni jalur
+Roboflow dan jalur Google Collaboratory. Jalur dari kedua ini berakhir di saat dataset dari roboflow melakukan export di google collaboratory dan berlanjut dari tahap tersebut sampai trained weights digunakan untuk melatih kembali model machine learning untuk dicari gambar dari berbagai kelas (helmet, no_helmet, no helmet) yang mana model yang yakin akan kebenarannya diatas 40%
+A.        Roboflow
+Pada tahap ini dataset dibuat di platform roboflow. Di roboflow,  pencarian dataset yang ideal dari berbagai macam sumber yang mana di roboflow akan dilakukan tahap annotate pada gambar dan generate dataset. Setelah semuanya tuntas, dataset akan di export menuju google collaboratory melalui baris kode yang dibuat oleh roboflow.
+
+
+
+B.       Google Collaboratory
+Di google collaboratory, dilakukan pengunduhan dependencies, melakukan import library yang akan digunakan memasukkan repository yolov5, memilih runtime GPU. Mengunduh dependencies, melakukan import library dan memasukkan yolov5 untuk mendukung kebutuhan model machine learning. Memasukkan yolov5 agar kemampuan melakukan object deteksi menjadi jauh lebih baik.
+Setelah pada jalur Roboflow menyelesaikan tugasnya untuk melakukan export dataset yang di edit. Model akan dimasukkan ke dalam direktori yolov5. Di direktori ini, model dilatih kembali, menghasilkan sebuah grafik analisis model, dan mendapatkan trained weights. Trained weights digunakan untuk mendeteksi sebuah file yang berisi gambar yang telah latih lalu untuk dilatih kembali. setelah selesai dilatih oleh Trained weights. Model yang sudah dilatih dengan Trained Weights akan mendeteksi gambar yang ada di sebuah folder dan menampilkan gambar di layar oleh model yang memiliki tingkat keyakinan benar di atas 40%. Selesai
+
+3.     Deteksi Pembacaan Plat Nomor
+
+Gambar 3. 4 Diagram Alur Model deteksi Pembacaan Plat Nomor
+
+
+
+
+Deteksi dan Pembacaan plat nomor dikerjakan di kaggle bukan google collaboratory seperti sebelumnya. Pengerjaan dimulai pada pengambilan dataset yang mana terintegrasi dengan file .xml. File .xml adalah sebuah file yang berisi informasi untuk koordinat bounding box untuk file foto baik untuk foto berformat .jpg maupun .PNG. Setelah mendapatkan dataset yang terintegrasi dengan file .xml tadi.
+Dilanjutkan dengan pengerjaan di code editor yang dipunyai oleh kaggle itu sendiri. Di code editor kaggle sendiri. Dilakukan instalasi Imutils dan melakukan import library yang diperlukan terlebih dahulu. Install imutils dilakukan untuk mendukung proses contour yang akan dilakukan di kaggle code editor. Di tahap selanjutnya, dilakukan pemanggilan path gambar yang akan diuji.
+Untuk pengujian model deteksi plat nomor, diperlukan beberapa tahapan agar model pada akhirnya dapat membaca tulisan di plat nomor mobil. Dimulai dari mengubah warna gambar target menjadi warna abu – abu secara keseluruhan, dilanjutkan dengan mengubah proses filter noise dan edge detection.
+Proses filter noise dilakukan untuk mengurangi noise yang terjadi dan edge detection/deteksi tepi digunakan untuk mengidentifikasi titik-titik dalam gambar digital di mana kecerahan gambar berubah tajam atau, lebih formal, dan memiliki diskontinuitas. Metode yang digunakan di di deteksi tepi kali ini adalah metode canny. Penggunaan metode canny ini dikarenakan metode ini mampu mendeteksi diskontinuitas yang jauh lebih banyak dibanding dengan metode deteksi tepi yang lain, seperti metode sobel, prewit dan robert yang kurang efektif dalam melakukan pendeteksian tepi dibanding metode canny. Setelah dilakukan proses deteksi tepi dan proses mengurangi proses mengurangi noise, maka gambar target menjadi gambar yang memiliki kontur dan berwarna dasar hitam pekat. masuk ke bagian implementasi          kontur/contour. Penggunaan kontur/contour untuk mendeteksi kontur/contour yang ada pada gambar target. Penggunaan deteksi tepi dengan metode canny untuk
+
+
+
+
+mencari kontur/contour yang dapat terdeteksi dengan baik oleh sistem pada gambar target. Keluaran dari proses ini adalah didapatkannya lokasi plat nomor berada dalam bentuk matriks.
+Langkah selanjutnya dilakukan masking dan pembacaan plat nomor yang dibantu oleh library easyOCR. Gambar target akan dimasking di koordinat lokasi plat nomor dan rentang wilayah yang ditentukan. Keluaran dari hasil ini adalah gambar target hanya menunjukkan bagian plat nomor saja dan di sekelilingnya luar dari plat nomor, warna menjadi hitam. Setelah mendapatkan visual lempeng plat nomor, sistem diminta untuk menunjukkan hasil lempengan plat nomor dengan sistem menunjukkan gambar kerat yang menunjukkan lempengan plat nomor, lalu gambar keratan tersebut diberi warna abu – abu secara keseluruhan. Gambar keratan diberi warna abu – abu secara keseluruhan untuk mendukung library easyOCR untuk membaca dan memberikan keluaran hasil dari bacaannya. Setelah hasil pembacaan plat nomor didapatkan, tampilan akan kembali ke gambar target seperti di awal dengan perbedaan yang mana adanya bounding box dan hasil bacaan plat nomor yang muncul di gambar target tersebut.
+4.   Deteksi Kecepatan para pengendara
+
+
+Gambar 3. 5 Diagram Alur Model deteksi kecepatan para pengendara Deteksi kecepatan pengendara sama seperti deteksi plat nomor
+pengendara dilakukan di kaggle. Inputan yang dibutuhkan dalam proses
+
+
+
+
+coding di bagian ini adalah melakukan instalasi ubuntu package (libgtk2.0 – dev), import library yang dibutuhkan, video uji dan cascade. Cascade adalah sebuah file yang berisi bounding box tapi untuk file video. File cascade ini berbentuk .xml.
+Di code editor, Kecepatan didefinisikan untuk objek kendaraan, lalu mendefinisikan pelacakan untuk menentukan target mana di video tersebut untuk diketahui kecepatan dari kendaraan dan terakhir menghapus pelacakan karena bukan di dalam wilayah pelacakan yang sudah ditentukan sebelumnya lewat file cascade tadi. Terakhir, adanya sebuah baris kode untuk mengunduh hasil dari analisis model diinputkan video uji.
+Setelah dilakukan pendefinisian kecepatan, pelacakan, dan penghapusan. Program akan dijalankan, lalu mengunduh file output.avi yang di dalam keluaran video tersebut sudah terdapat hasil analisa dari program yang sudah dijalankan sebelumnya.
+
 Realisasi dan Visualisasi Model
 Realisasi dan Visualisasi Model akan berfokus ke arah bagaimana masing – masing model dibangun, bagaimana setiap foto atau video dari berbagai macam dataset digunakan, dan output dari masing – masing model machine learning dipresentasikan baik dalam bentuk foto maupun dalam bentuk video.
 Realisasi dan Visualisasi Model deteksi Jenis Kendaraan
