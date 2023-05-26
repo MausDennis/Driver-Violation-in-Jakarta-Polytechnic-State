@@ -14,7 +14,7 @@ The following is a picture of the camera used and installed in a place at the Po
 Applications programs are demonstrated using flowchart diagrams. Flowchart diagrams in systems illustrate the connection and timing of processes.
 
 <p align = "center">
-  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-1-page-00001.jpg width="1000" height="500">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Flowchart%20driver%20violation%20.drawio.png width="900" height="400">
 </p>
 
 The flowchart above shows how the model determines the classification of tasks to be performed. When the dataset is entered into the model we want to model, the system starts. First, the system identifies the type of vehicle that was at the scene, then identifies the number plate of the vehicle that is crossing the road. Finally, the system evaluates data from cameras at the scene to ascertain whether any violations have occurred, such as exceeding the speed limit for all vehicles and requiring motorists to wear helmets. Each tested model is entered into the system one by one. Then, images from the scene cameras were used to test the model. In the end, the results of the analysis made by the model will be sent in the form of images or videos, depending on how well the model accepts the test object.
@@ -22,7 +22,7 @@ The flowchart above shows how the model determines the classification of tasks t
 # 2.1 Vehicle Type Detection
 
 <p align = "center">
-  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-2-page-00001.jpg width="500" height="750">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Vehicle%20Type%20Detection%20Flowchart.drawio.png width="400" height="650">
 </p>
 
 The flowchart above shows the process of identifying vehicle types using Google Collaborate. Datasets, institutions, and photo/video input from surveillance cameras will be entered into Google Collaborate.
@@ -36,7 +36,7 @@ The graph shows the result of training the machine learning model after that ste
 # 2.2 Helmet Use Detection
 
 <p align = "center">
-  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-3-page-00001.jpg width="500" height="750">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Helmet%20Use%20Detection%20Flowchart.drawio.png width="400" height="650">
 </p>
 
 In the flowchart above, the helmet use detection diagram process is explained by two paths: Roboflow and Google Collaboratory. The second path ends when the dataset from roboflow is exported to Google Collaboratory. This continues until the trained weight is used to retrain the machine learning model to find images from various classes (helmet, no_helmet, and no helmet), which the model believes have above 40% correctness.
@@ -52,7 +52,7 @@ After the Roboflow path has completed its work, the changed dataset must be expo
 # 2.3 License Plate Reading Detection
 
 <p align = "center">
-  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-5-page-00001.jpg width="500" height="750">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/License%20Plate%20Reading%20Detection%20Flowchart.drawio.png width="400" height="650">
 </p>
 
 As before, license plate detection and reading uses Kaggle rather than Google Colaboratory. The dataset must be fetched before work begins, which must be integrated with the .xml file. File.xml contains information about bounding box photo coordinates for .jpg and .PNG formats. After the dataset is integrated with the previous file.xml.
@@ -68,7 +68,7 @@ Masking and reading of license plates is done afterwards with the help of the ea
 # 2.4  Driver speed detection
 
 <p align = "center">
-  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-6-page-00001.jpg width="500" height="500">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Speed%20Detection%20Flowchart.drawio.png width="400" height="400">
 </p>
 
 Driver speed detection is similar to detecting a driver's license plate number on Kaggle. The coding process in this section requires input such as installing the ubuntu package (libgtk2.0 – dev), importing the required libraries, test videos, and cascade. However, Cascade is a video file with a bounding box. This derived file is coded.xml.
@@ -85,7 +85,7 @@ A. Build machine learning models
 This section will provide an explanation of the code required to develop the model to perform the tasks it desires.
 
 <p align = "center">
-  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-7-page-00001.jpg width="500" height="500">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-7-page-00001.jpg width="500" height="400">
 </p>
 
 To insert files into Google Collaboratory, the code above is used to import files from Google Drive.
