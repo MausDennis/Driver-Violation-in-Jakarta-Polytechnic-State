@@ -52,7 +52,7 @@ After the Roboflow path has completed its work, the changed dataset must be expo
 # 2.3 License Plate Reading Detection
 
 <p align = "center">
-  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-4-page-00001.jpg width="500" height="750">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-5-page-00001.jpg width="500" height="750">
 </p>
 
 As before, license plate detection and reading uses Kaggle rather than Google Colaboratory. The dataset must be fetched before work begins, which must be integrated with the .xml file. File.xml contains information about bounding box photo coordinates for .jpg and .PNG formats. After the dataset is integrated with the previous file.xml.
@@ -68,7 +68,7 @@ Masking and reading of license plates is done afterwards with the help of the ea
 # 2.4  Driver speed detection
 
 <p align = "center">
-  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-5-page-00001.jpg width="500" height="750">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-6-page-00001.jpg width="500" height="500">
 </p>
 
 Driver speed detection is similar to detecting a driver's license plate number on Kaggle. The coding process in this section requires input such as installing the ubuntu package (libgtk2.0 – dev), importing the required libraries, test videos, and cascade. However, Cascade is a video file with a bounding box. This derived file is coded.xml.
@@ -85,55 +85,55 @@ A. Build machine learning models
 This section will provide an explanation of the code required to develop the model to perform the tasks it desires.
 
 <p align = "center">
-  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-6-page-00001.jpg width="500" height="500">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-7-page-00001.jpg width="500" height="500">
 </p>
 
 To insert files into Google Collaboratory, the code above is used to import files from Google Drive.
 
 <p align = "center">
-  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-7-page-00001.jpg width="500" height="500">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-8-page-00001.jpg width="500" height="500">
 </p>
 
 The code above is used to point to the Google Collab directory to fetch the data, unzip it, and then point to the Google directory to train the custom model in the selected directory. 
 
 <p align = "center">
-  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-8-page-00001.jpg width="500" height="500">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-10-page-00001.jpg width="500" height="500">
 </p>
 
 With this code, you can edit the images in the dataset and insert the images into specific classes.
 
 <p align = "center">
-  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-10-page-00001.jpg width="500" height="500">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-11-page-00001.jpg width="500" height="500">
 </p>
 
 The model shows that the convolutional neural network (cnn) architecture is used. model.compile is used for metrics, optimizer, and setup loss. History is the model. Features are used to instruct the model
 
 <p align = "center">
-  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-11-page-00001.jpg width="500" height="500">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-12-page-00001.jpg width="500" height="300">
 </p>
 
 To include yolov5 in the model you have to get the code to call it from the github directory.
 
 <p align = "center">
-  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-12-page-00001.jpg width="500" height="300">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-13-page-00001.jpg width="500" height="300">
 </p>
 
 Use this package to download the libraries needed by Yolov5
 
 <p align = "center">
-  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-13-page-00001.jpg width="500" height="300">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-14-page-00001.jpg width="500" height="300">
 </p>
 
 This code is used to feed the video input to Google Collaboratory for analysis by the model.
 
 <p align = "center">
-  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-14-page-00001.jpg width="500" height="300">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-15-page-00001.jpg width="500" height="300">
 </p>
 
 Calls the detect.py file to identify objects in the video
 
 <p align = "center">
-  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-15-page-00001.jpg width="500" height="300">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-16-page-00001.jpg width="500" height="300">
 </p>
 
 Currently, analysis results can be downloaded to see how well the model can analyze the videos that have been inserted.
@@ -146,7 +146,7 @@ The dataset used is a collection of images in .jpg format. This dataset can be a
 The dataset that you have obtained is stored on Google Drive in a folder called dataset.zip.
 
 <p align = "center">
-  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/Kumpulan%20Photo%20untuk%20porto%20ml%20(1)-16-page-00001.jpg width="500" height="300">
+  <img src = https://github.com/MausDennis/Driver-Violation-in-Jakarta-Polytechnic-State/blob/main/Footage%20photo/16x_pages-to-jpg-0001%20(1).jpg width="800" height="100">
 </p>
 
 To allow datasets to be downloaded automatically, an authentication process is performed on Google Collab before gaining access to Google Drive. change the settings where datasets are stored and set the directory where the dataset files are located, as shown below:
